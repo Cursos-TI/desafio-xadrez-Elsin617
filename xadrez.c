@@ -26,5 +26,31 @@ int main() {
         i++;
     } while (i < casasRainha);
 
+    // CAVALO - Movimento em "L": duas casas para BAIXO e uma para a ESQUERDA
+    const int passosBaixo = 2;
+    const int passosEsquerda = 1;
+
+    printf("\nMovimento do Cavalo:\n");
+
+    // Loop externo com FOR para controlar as duas etapas do movimento
+    for (int etapa = 1; etapa <= 2; etapa++) {
+        // Etapa 1: mover duas casas para baixo usando WHILE
+        if (etapa == 1) {
+            int j = 0;
+            while (j < passosBaixo) {
+                printf("Baixo\n");
+                j++;
+            }
+        }
+        // Etapa 2: mover uma casa para a esquerda usando DO-WHILE
+        else if (etapa == 2) {
+            int k = 0;
+            do {
+                printf("Esquerda\n");
+                k++;
+            } while (k < passosEsquerda);
+        }
+    }
+
     return 0;
 }
